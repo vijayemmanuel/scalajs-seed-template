@@ -31,7 +31,7 @@ object ToolBar {
   @js.native
   private object ToolbarJS extends js.Object
 
-  val jsComponent = JsFnComponent[Props, Children.Varargs](ToolbarJS)
+  val jsComponent = JsComponent[Props, Children.Varargs,Null](ToolbarJS)
 
   /**
    *

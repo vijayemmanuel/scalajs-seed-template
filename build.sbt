@@ -21,6 +21,7 @@ libraryDependencies += "com.github.japgolly.scalajs-react" %%% "test" % "1.6.0"
 npmDependencies in Compile ++= Seq(
   "react" -> "16.8.0",
   "react-dom" -> "16.8.0",
-  "@material-ui/core" -> "3.9.3"
+  "@material-ui/core" -> "4.9.4",
+  "@material-ui/styles" -> "4.9.0"
 
 )

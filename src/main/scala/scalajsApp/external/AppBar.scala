@@ -45,7 +45,7 @@ object AppBar {
   @js.native
   private object AppBarJS extends js.Object
 
-  val jsComponent = JsFnComponent[Props, Children.Varargs](AppBarJS)
+  val jsComponent = JsComponent[Props, Children.Varargs,Null](AppBarJS)
 
 
   /**

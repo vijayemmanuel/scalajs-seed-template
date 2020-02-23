@@ -78,7 +78,7 @@ object Typography {
   @js.native
   object TypographyJS extends js.Object
 
-  val jsComponent = JsFnComponent[Props, Children.Varargs](TypographyJS)
+  val jsComponent = JsComponent[Props, Children.Varargs,Null](TypographyJS)
 
   /**
    *
