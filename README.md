@@ -1,12 +1,14 @@
 # scalajs-seed-template
 ScalaJS seed template to kick start development using scalajs-react and Diode(optional)
 
+Use Node V16.13.2
+
 Commands to Build and Run
 
-`fastOptJS::webpack`
+`fastOptJS/webpack`
 
-Copy index.html from assets folder and paste it in target\scala-2.12\scalajs-bundler\main
+Copy index.html from assets folder and paste it in target\scala-2.13\scalajs-bundler\main\public
 
-`fastOptJS::startWebpackDevServer`
+`fastOptJS/startWebpackDevServer`
 
 Go to localhost:8080 and enjoy!

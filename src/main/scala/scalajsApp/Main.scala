@@ -3,7 +3,6 @@ package scalajsApp
 import japgolly.scalajs.react.{React, ReactDOM}
 import org.scalajs.dom
 
-import scala.scalajs.js.JSApp
 import scalajs.js
 import scalajs.js.annotation._
 import japgolly.scalajs.react.vdom.html_<^._

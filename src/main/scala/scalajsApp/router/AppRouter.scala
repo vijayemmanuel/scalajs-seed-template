@@ -16,7 +16,7 @@ object AppRouter {
     (trimSlashes
       | staticRoute(root, HomeRoute) ~> renderR(renderHomePage)
     )
-      .notFound(redirectToPage(HomeRoute)(Redirect.Replace))
+      .notFound(redirectToPage(HomeRoute)(SetRouteVia.HistoryReplace))
       .renderWith(layout)
   }
 
