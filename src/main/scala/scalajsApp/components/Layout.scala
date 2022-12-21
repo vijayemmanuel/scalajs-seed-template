@@ -1,7 +1,7 @@
 package scalajsApp.components
 
 import japgolly.scalajs.react._
-import japgolly.scalajs.react.extra.router.RouterCtl
+import japgolly.scalajs.react.extra.router.{Resolution, RouterCtl}
 import japgolly.scalajs.react.vdom.html_<^._
 import scalajsApp.config.Config
 import scalajsApp.external.{AppBar, ToolBar, Typography}
@@ -12,8 +12,8 @@ import scalajsApp.router.AppRouter.Page
 object Layout {
 
 
-  case class Props(ctl: RouterCtl[Page]
-                  )
+  case class Props( ctl: RouterCtl[Page],
+                    r: Resolution[Page])
 
   class Backend(bs: BackendScope[Props, Unit]) {
     val host: String = Config.AppConfig.apiHost
@@ -29,7 +29,8 @@ object Layout {
               )
             )
 
-        )
+        ),
+        props.r.render()
       )
     )
   }

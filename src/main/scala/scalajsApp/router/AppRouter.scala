@@ -14,17 +14,18 @@ object AppRouter {
   val routerConfig = RouterConfigDsl[Page].buildConfig { dsl =>
     import dsl._
     (trimSlashes
-      | staticRoute(root, HomeRoute) ~> renderR(renderHomePage)
+      | staticRoute(root, HomeRoute) ~> render(<.div(
+      <.br(),
+      <.br(),
+      <.br(),
+        <.h1("Welcome")
+    ))
     )
       .notFound(redirectToPage(HomeRoute)(SetRouteVia.HistoryReplace))
       .renderWith(layout)
   }
 
-  def renderHomePage(ctl: RouterCtl[Page]) = {
-    Layout(Layout.Props(ctl))
-  }
-
-  def layout (c: RouterCtl[Page], r: Resolution[Page]) = Layout(Layout.Props(c))
+  def layout (c: RouterCtl[Page], r: Resolution[Page]) = Layout(Layout.Props(c,r))
 
   val baseUrl = BaseUrl.fromWindowOrigin_/
 
